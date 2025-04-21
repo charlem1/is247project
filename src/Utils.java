@@ -1,4 +1,7 @@
 package com.club.service;
 
-public class Utils {
+public class AgeRestrictionException extends Exception {
+    public AgeRestrictionException(String msg) {
+        super(msg);
+    }
 }

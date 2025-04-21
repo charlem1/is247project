@@ -56,7 +56,7 @@ public class TabService {
     public void alertOutstandingBalance(String userId) {
         double balance = getBalance(userId);
         if (balance > 0) {
-            System.out.println("⚠Outstanding balance for user " + userId + ": $" + balance);
+            System.out.println("Outstanding balance for user " + userId + ": $" + balance);
             System.out.println(" Interest will begin accruing in 24 hours if not paid.");
         }
     }

@@ -1,7 +1,6 @@
 package com.club.service;
 import java.util.Date;
 import java.util.Random;
-
 public class SecurityService {
    public boolean verifyAge(int age) {
         return age >= 21; // Minimum legal drinking age

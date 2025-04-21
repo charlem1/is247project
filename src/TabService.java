@@ -1,9 +1,7 @@
 package com.club.service;
 import java.util.HashMap;
 import java.util.Map;
-
-/**
- * This class manages bar tabs for customers in the club.
+/** This class manages bar tabs for customers in the club.
  * Each customer is identified by a unique user ID (e.g., wristband or app ID).
  */
 public class TabService {
@@ -11,8 +9,7 @@ public class TabService {
     // Stores each user's current tab balance
     private Map<String, Double> tabRecords = new HashMap<>();
 
-    /**
-     * Opens a new tab for a user if they don't already have one.
+    /** Opens a new tab for a user if they don't already have one.
      * @param userId The unique ID of the user.
      */
     public void openTab(String userId) {
@@ -52,8 +49,7 @@ public class TabService {
         return tabRecords.remove(userId); // remove and return balance
     }
 
-    /**
-     * Notifies the user if they have an unpaid balance.
+    /**Notifies the user if they have an unpaid balance.
      * This could be triggered during check-out.
      * @param userId The unique ID of the user.
      */

@@ -60,5 +60,13 @@ public class TabService {
             System.out.println(" Interest will begin accruing in 24 hours if not paid.");
         }
     }
+     public void showPurchases(Member m) {
+    }
+
+    public void addPurchase(Member m, String item) {
+    }
+
+    public void printReport(List<String> logs) {
+    }
 }
 

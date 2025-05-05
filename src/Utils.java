@@ -32,8 +32,8 @@ public class Utils {
         StringBuilder sb = new StringBuilder();
         for (String part : parts) {
             sb.append(Character.toUpperCase(part.charAt(0)))
-              .append(part.substring(1).toLowerCase())
-              .append(" ");
+                    .append(part.substring(1).toLowerCase())
+                    .append(" ");
         }
         return sb.toString().trim();
     }

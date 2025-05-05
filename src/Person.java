@@ -2,8 +2,8 @@ package com.club.service;
 
 public abstract class Person {
     // Encapsulated fields
-    private String name;
-    private int age;
+    public String name;
+    public int age;
 
     // Constructor
     public Person(String name, int age) {

@@ -8,27 +8,27 @@ import java.util.*;
  * It uses services such as {@link TabService} and {@link SecurityService}, and supports features
  * like VIP status, logs, and tab purchases.
  * </p>
- * 
+ *
  * <p>This application runs in a console loop offering interactive menu options.</p>
- * 
- * @author 
+ *
+ * @author
  */
 public class ClubApp {
-        /** Scanner for user input. */
+    /** Scanner for user input. */
     private static final Scanner scanner = new Scanner(System.in);
-    
-        /** List to store all registered club members. */
+
+    /** List to store all registered club members. */
     private static final List<Member> members = new ArrayList<>();
 
-        /** Logs of major events such as registration and purchases. */
+    /** Logs of major events such as registration and purchases. */
     private static final List<String> logs = new ArrayList<>();
 
-        /** Service for handling purchases (tabs). */
+    /** Service for handling purchases (tabs). */
     private static final TabService tabService = new TabService();
 
-        /** Service for validating age and enforcing security rules. */
+    /** Service for validating age and enforcing security rules. */
     private static final SecurityService securityService = new SecurityService();
-/**
+    /**
      * Main entry point of the application. Presents a menu and responds to user input.
      *
      * @param args command-line arguments (not used)
@@ -86,7 +86,7 @@ public class ClubApp {
         System.out.println("✅ Member registered!");
         logs.add("Registered: " + member.getMemberId());
     }
-/**
+    /**
      * Displays all registered members. If the list is empty, notifies the user.
      */
     private static void showAllMembers() {
@@ -96,7 +96,7 @@ public class ClubApp {
         }
         members.forEach(Member::displayInfo);
     }
-/**
+    /**
      * Finds a member by their ID.
      *
      * @param id the unique member ID
@@ -109,7 +109,7 @@ public class ClubApp {
         System.out.println("❌ Member not found.");
         return null;
     }
- /**
+    /**
      * Adds a purchase item to a specific member's tab.
      * Prompts for Member ID and item name.
      */
@@ -125,7 +125,7 @@ public class ClubApp {
             logs.add("Purchase: " + item + " by " + m.name);
         }
     }
-/**
+    /**
      * Views the list of purchases made by a specific member.
      * Prompts for Member ID.
      */
@@ -135,7 +135,7 @@ public class ClubApp {
         Member m = findMemberById(id);
         if (m != null) tabService.showPurchases(m);
     }
- /**
+    /**
      * Validates the age of a member using the {@code SecurityService}.
      * Prompts for Member ID and handles age-related exceptions.
      */
@@ -146,7 +146,7 @@ public class ClubApp {
         if (m != null) {
             try {
                 securityService.validateAge(m);
-            } catch (AgeRestrictionException e) {
+            } catch (com.club.service.AgeRestrictionException e) {
                 System.out.println(e.getMessage());
             }
         }

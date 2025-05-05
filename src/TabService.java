@@ -1,5 +1,6 @@
 package com.club.service;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 /** This class manages bar tabs for customers in the club.
  * Each customer is identified by a unique user ID (e.g., wristband or app ID).
@@ -60,7 +61,7 @@ public class TabService {
             System.out.println(" Interest will begin accruing in 24 hours if not paid.");
         }
     }
-     public void showPurchases(Member m) {
+    public void showPurchases(Member m) {
     }
 
     public void addPurchase(Member m, String item) {
@@ -69,4 +70,3 @@ public class TabService {
     public void printReport(List<String> logs) {
     }
 }
-

@@ -6,8 +6,8 @@ package com.club.service;
  * This exception is typically thrown when a person attempts to access a service
  * or area restricted by age, such as a club requiring patrons to be 21+.
  * </p>
- * 
- * @author 
+ *
+ * @author
  */
 public class AgeRestrictionException extends Exception {
     /**
